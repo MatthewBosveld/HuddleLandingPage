@@ -638,3 +638,22 @@ nav,
     margin: auto;
   }
 }
+
+.attribution {
+  width: 100%;
+  text-align: center;
+}
+.attribution a {
+  color: white;
+  text-decoration: none;
+}
+.attribution-info {
+  width: 100%;
+  text-align: center;
+  background-color: #00252e;
+  color: white;
+}
+.attribution-info a {
+  color: white;
+  text-decoration: none;
+}
