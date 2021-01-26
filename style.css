@@ -1,0 +1,640 @@
+/* 
+Style Guide
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%) / #674baf 
+- Soft Magenta: hsl(300, 69%, 71%) / #e882e8
+
+- Pink: hsl(322, 100%, 66%) - #ff52bf
+- Light Pink: hsl(321, 100%, 78%) - #ff8fd8
+- Light Red: hsl(0, 100%, 63%) - #ff4242
+
+### Neutral
+
+- Very Dark Cyan: hsl(192, 100%, 9%) - #00252e
+- Very Pale Blue: hsl(207, 100%, 98%) - #f5faff
+
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+
+*/
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PoppinsLight;
+  src: url(./fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: PoppinsRegular;
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: PoppinsMedium;
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: PoppinsBold;
+  src: url(./fonts/Poppins-Bold.ttf);
+}
+
+body {
+  font-family: PoppinsLight;
+}
+
+.landing {
+  background-image: url("./images/bg-desktop.svg");
+  background-color: #674baf;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+button {
+  font-family: PoppinsLight;
+}
+
+/* Landing Page */
+
+nav {
+  height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 80vh;
+  align-items: center;
+}
+
+.landing-info {
+  position: relative;
+  bottom: 110px;
+}
+
+.landing-image {
+  height: 65vh;
+  margin: 0px 80px 0px 0px;
+  justify-content: center;
+}
+.landing-image img {
+  height: 100%;
+}
+
+.landing-text h1 {
+  font-family: PoppinsMedium;
+  font-weight: bold;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.landing-text p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cta {
+  padding: 50px 0px 0px 0px;
+}
+
+.cta-register {
+  background-color: white;
+  color: #674baf;
+  border: none;
+  border-radius: 50px;
+  height: 60px;
+  width: 180px;
+  font-size: 18px;
+  font-weight: bolder;
+  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.6);
+  margin: 5px 8px 5px 5px;
+  cursor: pointer;
+}
+.cta-register:hover {
+  background-color: #e882e8;
+  color: white;
+  animation: pulse 0.5s;
+}
+
+.cta-more-info {
+  background-color: white;
+  color: #674baf;
+  border: none;
+  border-radius: 50px;
+  height: 60px;
+  width: 180px;
+  font-size: 18px;
+  font-weight: bolder;
+  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.6);
+  margin: 5px 5px 5px 8px;
+  cursor: pointer;
+}
+.cta-more-info:hover {
+  background-color: #e882e8;
+  color: white;
+}
+.cta button:hover {
+  animation: pulse-cta 0.5s ease-in-out infinite alternate;
+}
+@keyframes pulse-cta {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Socials */
+
+.footer-landing {
+  height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-socials svg {
+  fill: white;
+  height: 100%;
+}
+
+.landing-socials svg:hover {
+  fill: #e882e8;
+  animation: pulse-soc 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-soc {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+svg.instagram-icon,
+svg.facebook-icon,
+svg.twitter-icon {
+  width: 22%;
+}
+
+.landing-socials {
+  display: flex;
+  width: 15%;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  height: 60px;
+}
+
+/* Responsive design landing */
+
+@media (max-width: 1500px) {
+  .landing {
+    background-image: url(./images/bg-mobile.svg);
+    background-color: #674baf;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+  }
+
+  .landing-text h1 {
+    font-size: 34px;
+  }
+
+  .landing-image {
+    height: 45vh;
+    margin: 0px 80px 0px 0px;
+    justify-content: center;
+  }
+  .landing-image img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1152px) {
+  .presentation {
+    flex-direction: column;
+  }
+  .landing-image img {
+    height: 65%;
+    margin-left: 10%;
+  }
+
+  .landing-text {
+    text-align: center;
+  }
+  .landing-text h1 {
+    font-size: 28px;
+  }
+  .landing-text p {
+    font-size: 18px;
+  }
+  .cta {
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .landing-socials {
+    left: 50%;
+    width: 40%;
+    justify-content: space-around;
+    transform: translateX(-50%);
+  }
+  .landing-socials svg {
+    height: 55%;
+  }
+
+  .logo {
+    height: 50%;
+  }
+}
+.landing-socials svg {
+  fill: white;
+  height: 100%;
+}
+
+/* Info page */
+
+.logo-container,
+.cta-info-page {
+  margin: 50px 0px 0px 0px;
+}
+
+nav,
+.logo-container {
+  height: 10vh;
+}
+
+.wave img {
+  width: 100%;
+  display: block;
+}
+.cta-header {
+  background-color: white;
+  color: #ff52bf;
+  border: 2px solid #ff52bf;
+  border-radius: 350px;
+  height: 50px;
+  width: 160px;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 5px 8px 5px 5px;
+  cursor: pointer;
+}
+.cta-info-page button:hover {
+  animation: pulse-cta 0.5s ease-in-out infinite alternate;
+}
+.cta-header:hover {
+  animation: pulse-cta 0.5s;
+}
+
+.cta-info {
+  padding: 80px 0px 60px 0px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.cta-info h1 {
+  font-family: PoppinsMedium;
+  font-size: 48px;
+}
+.cta-info p {
+  padding: 40px 30% 40px 30%;
+  font-size: 20px;
+}
+.cta-info-button {
+  border: none;
+  background-color: #ff52bf;
+  color: white;
+  border-radius: 50px;
+  height: 60px;
+  width: 300px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: PoppinsMedium;
+  margin: 20px 0px;
+}
+.cta-info-button:hover {
+  background-color: #ff8fd8;
+  cursor: pointer;
+}
+
+.mockup-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.mockup-img img {
+  height: 100%;
+}
+
+.stats-info {
+  margin: 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-info img {
+  height: 30px;
+}
+.stats-info h2 {
+  font-size: 48px;
+  font-family: PoppinsMedium;
+}
+.stats-info p {
+  font-size: 20px;
+}
+
+.grow,
+.users {
+  background-color: #f5faff;
+}
+
+.grow,
+.flow,
+.users {
+  display: flex;
+  height: 55vh;
+  padding: 80px 15% 80px 15%;
+  justify-content: center;
+  align-items: center;
+}
+.grow img,
+.flow img,
+.users img {
+  height: 100%;
+}
+
+.grow-text,
+.users-text {
+  padding: 0px 10% 0px 0px;
+}
+.flow-text {
+  padding: 0px 0px 0px 10%;
+}
+.grow h2,
+.flow h2,
+.users h2 {
+  font-family: PoppinsBold;
+  font-size: 34px;
+  padding-bottom: 30px;
+}
+
+.cta-info-bottom {
+  text-align: center;
+  padding: 100px 0px;
+}
+.cta-info-bottom h1 {
+  font-family: PoppinsBold;
+  font-size: 34px;
+  padding-bottom: 25px;
+}
+
+.footer-info {
+  background-color: #00252e;
+  color: white;
+  padding: 80px 5% 15px 5%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.contact-info {
+  width: 50%;
+}
+#contact-text {
+  padding: 20px 0px 0px 0px;
+  width: 40%;
+}
+.phone,
+.email {
+  display: flex;
+  padding-top: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.phone img,
+.email img {
+  padding-right: 20px;
+  height: 100%;
+}
+
+.info-socials {
+  padding-top: 40px;
+  display: flex;
+  width: 35%;
+  justify-content: flex-start;
+}
+.info-socials svg {
+  fill: white;
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+
+.newsletter {
+  width: 35%;
+  margin: 0px 10% 0px auto;
+}
+.newsletter h3 {
+  font-size: 24px;
+  font-family: PoppinsMedium;
+  padding-bottom: 29px;
+}
+.cta-newsletter {
+  margin-top: 40px;
+  display: flex;
+}
+#email-input {
+  border: none;
+  border-radius: 6px;
+  width: 300px;
+  padding: 5px;
+}
+
+.subscribe {
+  background-color: #ff52bf;
+  color: white;
+  font-family: PoppinsMedium;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  padding: 10px 40px;
+  margin-left: 40px;
+}
+.subscribe:hover {
+  background-color: #ff8fd8;
+  cursor: pointer;
+}
+
+/* Responsive design info page */
+
+@media (max-width: 1000px) {
+  .logo-container img {
+    height: 30%;
+    margin: 5%;
+  }
+
+  .cta-header {
+    background-color: white;
+    color: #ff52bf;
+    border: 2px solid #ff52bf;
+    border-radius: 350px;
+    height: 40px;
+    width: 120px;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  .cta-info {
+    padding: 80px 0px 60px 0px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+  .cta-info h1 {
+    font-family: PoppinsMedium;
+    font-size: 32px;
+  }
+  .cta-info p {
+    font-size: 16px;
+    padding: 5% 5%;
+  }
+  .mockup-img img {
+    height: 50%;
+  }
+
+  .stats-info {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+  }
+  .stats-info img {
+    height: 40px;
+    position: relative;
+    display: flex;
+    left: 10%;
+  }
+  .stats-info h2 {
+    font-size: 48px;
+    font-family: PoppinsMedium;
+    text-align: center;
+  }
+  .stats-info p {
+    font-size: 20px;
+  }
+  .communities {
+    width: 50%;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+  }
+  .messages {
+    width: 50%;
+    text-align: center;
+    padding: 150px 0px 0px 0px;
+  }
+
+  .grow,
+  .flow,
+  .users {
+    padding: 80px 5%;
+    flex-direction: column;
+  }
+  .grow,
+  .users {
+    flex-direction: column-reverse;
+  }
+  .grow img,
+  .flow img,
+  .users img {
+    height: 60%;
+    margin: 70px 30px 30px 30px;
+  }
+  .flow {
+    margin: 50px 0px;
+  }
+  .grow p,
+  .flow p,
+  .users p {
+    margin: 20px auto;
+  }
+
+  .grow-text,
+  .users-text,
+  .flow-text {
+    text-align: center;
+    padding: 5% 5%;
+  }
+
+  .cta-info-bottom {
+    text-align: center;
+  }
+  .footer-info {
+    flex-direction: column-reverse;
+  }
+  .newsletter {
+    width: 90%;
+    margin: auto;
+  }
+
+  .contact-info {
+    width: 90%;
+    margin: 90px auto 0px auto;
+  }
+  #contact-text {
+    width: 100%;
+  }
+
+  .cta-newsletter {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .cta-newsletter button {
+    margin-top: 15px;
+  }
+  #email-input {
+    height: 35px;
+    width: 100%;
+    margin: auto;
+  }
+}
